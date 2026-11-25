@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTC | गुप्ता ट्रेडिंग कंपनी - प्रीमियम थोक सब्ज़ी एवं फल सप्लायर, रायपुर (छ.ग.)</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Luxury Fonts: Tiro Devanagari Hindi, Noto Sans Devanagari & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans Devanagari"', '"Plus Jakarta Sans"', 'sans-serif'],
+                        serifHindi: ['"Tiro Devanagari Hindi"', 'serif'],
+                        display: ['"Plus Jakarta Sans"', '"Noto Sans Devanagari"', 'sans-serif'],
+                    },
+                    colors: {
+                        emeraldDeep: {
+                            950: '#061A11',
+                            900: '#0B2B1C',
+                            800: '#123C28',
+                            700: '#1B5439',
+                            100: '#E6F2EC',
+                            50: '#F2F8F5',
+                        },
+                        limeFresh: {
+                            600: '#4F9E26',
+                            500: '#64B936',
+                            400: '#82D156',
+                            100: '#EEF9E7',
+                        },
+                        harvestGold: {
+                            600: '#B87E14',
+                            500: '#D99B26',
+                            400: '#EAB64D',
+                            100: '#FDF6E7',
+                        },
+                        tomatoRed: {
+                            600: '#B8281B',
+                            500: '#D93829',
+                            100: '#FCECEB',
+                        },
+                        ivoryLux: '#FAF8F3',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #FAF8F3;
+            color: #0B2B1C;
+            overflow-x: hidden;
+        }
+
+        /* Luxury Glassmorphism */
+        .glass-header {
+            background: rgba(250, 248, 243, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .glass-dark {
+            background: rgba(18, 60, 40, 0.55);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(217, 155, 38, 0.25);
+        }
+
+        /* Vegetable Floating Animations */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-16px) rotate(5deg); }
+        }
+        @keyframes floatReverse {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(14px) rotate(-6deg); }
+        }
+        @keyframes floatDiagonal {
+            0%, 100% { transform: translate(0px, 0px) rotate(-3deg); }
+            50% { transform: translate(10px, -14px) rotate(4deg); }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(100, 185, 54, 0.45); }
+            50% { box-shadow: 0 0 0 14px rgba(100, 185, 54, 0); }
+        }
+
+        .veg-float-1 { animation: floatSlow 6s ease-in-out infinite; }
+        .veg-float-2 { animation: floatReverse 7s ease-in-out infinite; }
+        .veg-float-3 { animation: floatDiagonal 8s ease-in-out infinite; }
+        .whatsapp-pulse { animation: pulseGlow 2.4s infinite; }
+
+        /* Marquee Ticker Animation */
+        @keyframes marqueeScroll {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marqueeScroll 28s linear infinite;
+        }
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        /* Luxury Card Elevation */
+        .lux-card {
+            transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .lux-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 22px 40px -12px rgba(11, 43, 28, 0.16);
+            border-color: rgba(217, 155, 38, 0.55);
+        }
+
+        /* Scroll Reveal */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Page Transition */
+        .page-section {
+            animation: pageFade 0.4s ease-out;
+        }
+        @keyframes pageFade {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-harvestGold-500 selection:text-emeraldDeep-950 flex flex-col min-h-screen">
+
+    <!-- ========================================================= -->
+    <!-- TOP LUXURY CONTACT & DIRECT CALL BAR                      -->
+    <!-- ========================================================= -->
+    <div class="bg-emeraldDeep-950 text-ivoryLux text-xs py-2.5 px-4 border-b border-harvestGold-500/25">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-3 sm:space-x-4">
+                <span class="flex items-center text-harvestGold-400 font-semibold">
+                    <i class="fa-solid fa-location-dot mr-1.5"></i>डुमरतराई थोक मंडी, रायपुर (छ.ग.)
+                </span>
+                <span class="hidden lg:inline text-emeraldDeep-700">|</span>
+                <span class="hidden lg:inline text-emerald-200/80">
+                    प्रोप्राइटर: उमेश गुप्ता • राकेश गुप्ता • रत्नेश गुप्ता
+                </span>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-2.5 sm:gap-4 font-semibold">
+                <a href="https://wa.me/917000611356" target="_blank" rel="noopener" class="inline-flex items-center text-limeFresh-400 hover:text-white transition">
+                    <i class="fa-brands fa-whatsapp text-sm mr-1.5"></i>WhatsApp: +91 70006 11356
+                </a>
+                <span class="text-emeraldDeep-700">|</span>
+                <a href="tel:+919755291356" class="inline-flex items-center text-ivoryLux hover:text-harvestGold-400 transition">
+                    <i class="fa-solid fa-phone text-[11px] mr-1 text-harvestGold-400"></i>+91 97552 91356
+                </a>
+                <span class="hidden md:inline text-emeraldDeep-700">|</span>
+                <a href="tel:+917898011806" class="hidden md:inline-flex items-center text-ivoryLux hover:text-harvestGold-400 transition">
+                    <i class="fa-solid fa-phone text-[11px] mr-1 text-harvestGold-400"></i>+91 78980 11806
+                </a>
+                <span class="hidden xl:inline text-emeraldDeep-700">|</span>
+                <a href="tel:+917415936740" class="hidden xl:inline-flex items-center text-ivoryLux hover:text-harvestGold-400 transition">
+                    <i class="fa-solid fa-phone text-[11px] mr-1 text-harvestGold-400"></i>+91 74159 36740
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- STICKY GLASSMORPHISM HEADER WITH CUSTOM GTC LOGO SVG      -->
+    <!-- ========================================================= -->
+    <header class="sticky top-0 z-40 glass-header border-b border-emeraldDeep-900/10 shadow-sm">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20 sm:h-24 gap-2">
+                
+                <!-- Custom GTC Logo Emblem + Brand Name -->
+                <button onclick="navigateTo('home')" class="flex items-center space-x-2.5 sm:space-x-3 text-left focus:outline-none group min-w-0">
+                    <div class="w-11 h-11 sm:w-14 sm:h-14 shrink-0 bg-white rounded-2xl p-1 shadow-md border border-harvestGold-500/30 group-hover:scale-105 transition duration-300 flex items-center justify-center">
+                        <svg viewBox="0 0 100 100" class="w-9 h-9 sm:w-12 sm:h-12" xmlns="http://www.w3.org/2000/svg" aria-label="GTC Logo">
+                            <g>
+                                <path d="M 18 52 A 33 33 0 0 1 78 26" fill="none" stroke="#64B936" stroke-width="5.5" stroke-linecap="round"/>
+                                <polygon points="12,50 24,50 18,62" fill="#64B936"/>
+                                <path d="M 82 48 A 33 33 0 0 1 28 78" fill="none" stroke="#64B936" stroke-width="5.5" stroke-linecap="round"/>
+                                <polygon points="88,50 76,50 82,38" fill="#64B936"/>
+                                <path d="M 27 32 A 26 26 0 0 1 72 30" fill="none" stroke="#0B2B1C" stroke-width="3.2" stroke-linecap="round"/>
+                                <path d="M 68 72 A 26 26 0 0 1 25 65" fill="none" stroke="#0B2B1C" stroke-width="3.2" stroke-linecap="round"/>
+                                <polygon points="21,67 30,61 28,72" fill="#0B2B1C"/>
+                            </g>
+                            <g>
+                                <path d="M 33 62 C 24 50, 27 32, 39 27 C 46 24, 52 32, 49 46 C 47 54, 41 60, 33 62 Z" fill="#4F9E26"/>
+                                <path d="M 36 59 L 40 33 M 38 47 L 32 42 M 39 41 L 45 36" stroke="#EEF9E7" stroke-width="1.6" stroke-linecap="round"/>
+                                <path d="M 28 65 C 24 59, 27 52, 34 52 C 37 56, 35 63, 28 65 Z" fill="#0B2B1C"/>
+                            </g>
+                            <g transform="rotate(24 56 52)">
+                                <path d="M 56 32 C 53 24, 49 22, 48 25 M 56 32 C 56 22, 57 20, 59 23 M 56 32 C 60 24, 64 23, 64 26" fill="none" stroke="#4F9E26" stroke-width="2.2" stroke-linecap="round"/>
+                                <path d="M 49 33 C 49 30, 63 30, 63 33 L 57 72 C 56.5 75, 55.5 75, 55 72 Z" fill="#EA7B24"/>
+                                <path d="M 52 41 H 57 M 55 49 H 60 M 53 57 H 57" stroke="#B8530E" stroke-width="1.4" stroke-linecap="round"/>
+                            </g>
+                            <g>
+                                <circle cx="64" cy="64" r="11" fill="#D93829"/>
+                                <circle cx="60.5" cy="60.5" r="2.5" fill="#FF8A7A" opacity="0.65"/>
+                                <path d="M 64 53 L 61 49 M 64 53 L 67 49 M 64 53 L 59 54 M 64 53 L 69 54" stroke="#0B2B1C" stroke-width="1.8" stroke-linecap="round"/>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="min-w-0">
+                        <div class="flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
+                            <span class="font-display text-lg sm:text-2xl font-extrabold tracking-tight text-emeraldDeep-900 leading-none">GTC</span>
+                            <span class="h-3.5 w-[1.5px] bg-harvestGold-500"></span>
+                            <span class="text-sm sm:text-xl font-extrabold text-emeraldDeep-900 leading-tight truncate">गुप्ता ट्रेडिंग कंपनी</span>
+                        </div>
+                        <span class="block text-[9px] sm:text-[11px] font-bold tracking-wider text-emeraldDeep-700 uppercase mt-0.5 truncate">
+                            VEGETABLE COMMISSION AGENCY & WHOLESALE
+                        </span>
+                    </div>
+                </button>
+
+                <!-- Desktop 3-Page Navigation -->
+                <nav class="hidden lg:flex items-center space-x-1.5 bg-emeraldDeep-900/5 p-1.5 rounded-2xl border border-emeraldDeep-900/10">
+                    <button onclick="navigateTo('home')" id="nav-home" class="nav-btn px-4 py-2.5 rounded-xl font-bold text-sm transition bg-emeraldDeep-900 text-ivoryLux shadow-sm">
+                        मुख्य पृष्ठ एवं गैलरी
+                    </button>
+                    <button onclick="navigateTo('store')" id="nav-store" class="nav-btn px-4 py-2.5 rounded-xl font-bold text-sm text-emeraldDeep-800 hover:bg-white/70 transition">
+                        थोक उत्पाद स्टोर
+                    </button>
+                    <button onclick="navigateTo('booking')" id="nav-booking" class="nav-btn px-4 py-2.5 rounded-xl font-bold text-sm text-emeraldDeep-800 hover:bg-white/70 transition">
+                        बुकिंग एवं संपर्क
+                    </button>
+                </nav>
+
+                <!-- Right Controls: Bulk Cart + Primary CTA -->
+                <div class="flex items-center space-x-2.5 sm:space-x-3">
+                    <button onclick="toggleCartDrawer(true)" class="relative p-3 rounded-2xl bg-white border border-emeraldDeep-900/15 text-emeraldDeep-900 hover:border-harvestGold-500 shadow-xs transition" aria-label="थोक ऑर्डर सूची">
+                        <i class="fa-solid fa-basket-shopping text-lg text-emeraldDeep-800"></i>
+                        <span id="cart-badge" class="absolute -top-1.5 -right-1.5 bg-tomatoRed-500 text-white text-xs font-extrabold w-5 h-5 rounded-full flex items-center justify-center shadow">0</span>
+                    </button>
+
+                    <button onclick="navigateTo('booking')" class="hidden sm:inline-flex items-center px-5 py-3.5 rounded-2xl bg-gradient-to-r from-emeraldDeep-900 to-emeraldDeep-800 hover:from-emeraldDeep-800 hover:to-limeFresh-600 text-ivoryLux font-bold text-sm shadow-lg shadow-emeraldDeep-900/20 border border-harvestGold-500/40 transition transform active:scale-95">
+                        <i class="fa-regular fa-calendar-check text-harvestGold-400 mr-2"></i>
+                        थोक ऑर्डर / अपॉइंटमेंट बुक करें
+                    </button>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button onclick="toggleMobileMenu()" class="lg:hidden p-3 rounded-2xl bg-white border border-emeraldDeep-900/15 text-emeraldDeep-900" aria-label="मोबाइल मेनू">
+                        <i class="fa-solid fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-ivoryLux border-t border-emeraldDeep-900/10 px-4 pt-3 pb-6 space-y-2 shadow-xl">
+            <button onclick="navigateTo('home'); toggleMobileMenu()" id="m-nav-home" class="w-full text-left px-4 py-3 rounded-xl font-bold text-ivoryLux bg-emeraldDeep-900">
+                1. मुख्य पृष्ठ एवं गैलरी
+            </button>
+            <button onclick="navigateTo('store'); toggleMobileMenu()" id="m-nav-store" class="w-full text-left px-4 py-3 rounded-xl font-bold text-emeraldDeep-900 hover:bg-emeraldDeep-100">
+                2. थोक उत्पाद स्टोर (दैनिक दरें)
+            </button>
+            <button onclick="navigateTo('booking'); toggleMobileMenu()" id="m-nav-booking" class="w-full text-left px-4 py-3 rounded-xl font-bold text-emeraldDeep-900 hover:bg-emeraldDeep-100">
+                3. बुकिंग एवं संपर्क
+            </button>
+            <div class="pt-2">
+                <button onclick="navigateTo('booking'); toggleMobileMenu()" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-emeraldDeep-900 to-emeraldDeep-800 text-ivoryLux font-bold text-center border border-harvestGold-500/40 shadow-md">
+                    <i class="fa-regular fa-calendar-check text-harvestGold-400 mr-2"></i>थोक ऑर्डर / अपॉइंटमेंट बुक करें
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================================= -->
+    <!-- MAIN CONTENT AREA (3 DISTINCT PAGES)                      -->
+    <!-- ========================================================= -->
+    <main class="flex-grow">
+
+        <!-- ===================================================== -->
+        <!-- PAGE 1: मुख्य पृष्ठ एवं गैलरी                           -->
+        <!-- ===================================================== -->
+        <section id="page-home" class="page-section">
+            
+            <!-- ULTRA-PREMIUM DARK EMERALD HERO WITH FLOATING VEGETABLE ANIMATIONS -->
+            <div id="hero-parallax-zone" class="relative overflow-hidden bg-gradient-to-br from-emeraldDeep-950 via-emeraldDeep-900 to-emeraldDeep-800 text-ivoryLux pt-12 pb-20 lg:py-24">
+                
+                <!-- Subtle Luxury Gold Radial Glows -->
+                <div class="absolute -top-24 -left-24 w-96 h-96 bg-limeFresh-500/15 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-harvestGold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <!-- Floating Animated Vegetable SVGs -->
+                <div data-speed="0.03" class="parallax-veg veg-float-1 hidden sm:block absolute top-10 left-[4%] w-16 h-16 opacity-85 pointer-events-none">
+                    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="40" cy="44" r="26" fill="#D93829"/>
+                        <ellipse cx="32" cy="35" rx="7" ry="4" transform="rotate(-25 32 35)" fill="#FF8A7A" opacity="0.6"/>
+                        <path d="M40 18 L32 10 M40 18 L48 10 M40 18 L27 21 M40 18 L53 21 M40 18 L40 8" stroke="#64B936" stroke-width="3.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+
+                <div data-speed="-0.04" class="parallax-veg veg-float-2 hidden md:block absolute top-14 right-[6%] w-20 h-20 opacity-85 pointer-events-none">
+                    <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="rotate(32 45 45)">
+                            <path d="M45 20 C38 8, 32 8, 34 15 M45 20 C45 6, 48 6, 48 14 M45 20 C52 9, 57 10, 54 16" fill="none" stroke="#82D156" stroke-width="3.2" stroke-linecap="round"/>
+                            <path d="M34 22 C34 17, 56 17, 56 22 L47 76 C46 80, 44 80, 43 76 Z" fill="#EA7B24"/>
+                            <path d="M38 33 H46 M44 45 H52 M39 56 H46" stroke="#B8530E" stroke-width="2" stroke-linecap="round"/>
+                        </g>
+                    </svg>
+                </div>
+
+                <div data-speed="0.05" class="parallax-veg veg-float-3 hidden lg:block absolute bottom-12 left-[6%] w-20 h-20 opacity-80 pointer-events-none">
+                    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M34 45 L32 68 C32 71, 48 71, 48 68 L46 45 Z" fill="#82D156"/>
+                        <circle cx="28" cy="36" r="13" fill="#4F9E26"/>
+                        <circle cx="52" cy="36" r="13" fill="#4F9E26"/>
+                        <circle cx="40" cy="26" r="15" fill="#64B936"/>
+                    </svg>
+                </div>
+
+                <div data-speed="-0.03" class="parallax-veg veg-float-1 hidden lg:block absolute bottom-10 right-[44%] w-16 h-16 opacity-75 pointer-events-none">
+                    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M40 16 C40 10, 46 8, 48 12" fill="none" stroke="#64B936" stroke-width="4" stroke-linecap="round"/>
+                        <rect x="20" y="20" width="18" height="44" rx="9" fill="#EAB64D"/>
+                        <rect x="42" y="20" width="18" height="44" rx="9" fill="#EAB64D"/>
+                        <rect x="30" y="18" width="20" height="48" rx="10" fill="#D99B26"/>
+                    </svg>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        
+                        <!-- Hero Left Editorial Copy -->
+                        <div class="lg:col-span-7 space-y-6">
+                            <div class="inline-flex items-center space-x-2.5 px-4 py-2 rounded-full glass-dark text-harvestGold-400 text-xs sm:text-sm font-bold tracking-wide">
+                                <span class="w-2.5 h-2.5 rounded-full bg-limeFresh-400 animate-ping"></span>
+                                <span>रायपुर (छत्तीसगढ़) का अग्रणी प्रीमियम B2B सब्ज़ी एवं फल कमीशन केंद्र</span>
+                            </div>
+
+                            <h1 class="font-serifHindi text-3xl sm:text-5xl lg:text-[3.4rem] font-normal text-white leading-[1.24]">
+                                खेत की <span class="text-limeFresh-400 font-bold">शुद्ध ताज़गी</span>, सीधा आपके <span class="text-harvestGold-400 underline decoration-harvestGold-500/40 underline-offset-8">होटल, रेस्टोरेंट</span> और <span class="text-white font-bold">रिटेल स्टोर</span> तक।
+                            </h1>
+
+                            <p class="text-base sm:text-lg text-emerald-100/90 leading-relaxed max-w-2xl">
+                                <strong>गुप्ता ट्रेडिंग कंपनी (GTC)</strong> — उमेश गुप्ता, राकेश गुप्ता और रत्नेश गुप्ता के नेतृत्व में रायपुर की सबसे विश्वसनीय थोक सब्ज़ी एवं फल कमीशन एजेंसी। हम प्रतिदिन सुबह 4:00 बजे से ग्रेड-A छांटी हुई सब्ज़ियों और मौसमी फलों की समयबद्ध आपूर्ति करते हैं।
+                            </p>
+
+                            <!-- Primary & Secondary Hero Action Buttons -->
+                            <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                                <button onclick="navigateTo('store')" class="px-8 py-4 rounded-2xl bg-gradient-to-r from-harvestGold-500 to-harvestGold-400 hover:from-harvestGold-400 hover:to-harvestGold-500 text-emeraldDeep-950 font-extrabold text-base shadow-xl shadow-harvestGold-500/20 transition transform hover:-translate-y-0.5 flex items-center justify-center">
+                                    <span>आज की थोक रेट लिस्ट देखें</span>
+                                    <i class="fa-solid fa-arrow-right ml-2.5"></i>
+                                </button>
+                                <a href="https://wa.me/917000611356?text=नमस्ते%20गुप्ता%20ट्रेडिंग%20कंपनी%20(GTC),%20हमें%20थोक%20सब्ज़ी%20व%20फल%20सप्लाई%20की%20जानकारी%20चाहिए।" target="_blank" rel="noopener" class="px-7 py-4 rounded-2xl glass-dark hover:bg-emeraldDeep-800 text-white font-bold text-base transition flex items-center justify-center">
+                                    <i class="fa-brands fa-whatsapp text-limeFresh-400 text-xl mr-2.5"></i>
+                                    <span>ऑफिशियल व्हाट्सएप: 7000611356</span>
+                                </a>
+                            </div>
+
+                            <!-- Luxury Trust Stats -->
+                            <div class="grid grid-cols-3 gap-4 pt-8 border-t border-white/15">
+                                <div>
+                                    <p class="font-display text-2xl sm:text-4xl font-extrabold text-harvestGold-400">500+</p>
+                                    <p class="text-xs sm:text-sm text-emerald-200 mt-1">होटल, कैफे व रिटेल पार्टनर्स</p>
+                                </div>
+                                <div>
+                                    <p class="font-display text-2xl sm:text-4xl font-extrabold text-limeFresh-400">सुबह 4:00</p>
+                                    <p class="text-xs sm:text-sm text-emerald-200 mt-1">ताज़ा मंडी आवक व डिलीवरी</p>
+                                </div>
+                                <div>
+                                    <p class="font-display text-2xl sm:text-4xl font-extrabold text-white">100%</p>
+                                    <p class="text-xs sm:text-sm text-emerald-200 mt-1">ग्रेड-A क्वालिटी व सटीक तौल</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hero Right: Floating GTC Emblem Seal + Luxury Produce Showcase -->
+                        <div class="lg:col-span-5 relative">
+                            <div class="relative mx-auto max-w-md">
+                                <div class="rounded-[2.2rem] overflow-hidden border-2 border-harvestGold-500/40 shadow-2xl bg-emeraldDeep-800 aspect-[4/5] relative">
+                                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=85" 
+                                         onerror="this.src='https://placehold.co/600x750/123C28/FAF8F3?text=GTC+ताज़ी+सब्ज़ियाँ+रायपुर'"
+                                         alt="गुप्ता ट्रेडिंग कंपनी ताज़ी थोक सब्ज़ियाँ" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-emeraldDeep-950/90 via-transparent to-transparent"></div>
+                                    
+                                    <div class="absolute bottom-5 left-5 right-5 glass-dark p-4 rounded-2xl">
+                                        <div class="flex items-center justify-between">
+                                            <div>
+                                                <p class="text-xs text-harvestGold-400 font-bold uppercase tracking-wider">रायपुर थोक मंडी</p>
+                                                <p class="text-white font-bold text-sm sm:text-base">दैनिक फार्म-फ्रेश ग्रेडिंग</p>
+                                            </div>
+                                            <span class="px-3 py-1 rounded-full bg-limeFresh-500/20 border border-limeFresh-400 text-limeFresh-400 text-xs font-bold">
+                                                लाइव स्टॉक
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Floating Authentic GTC Seal Card -->
+                                <div class="veg-float-2 absolute -top-6 -left-4 sm:-left-8 bg-white text-emeraldDeep-900 p-3.5 sm:p-4 rounded-3xl shadow-2xl border-2 border-harvestGold-500 flex items-center space-x-3">
+                                    <svg viewBox="0 0 100 100" class="w-12 h-12 shrink-0" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M 18 52 A 33 33 0 0 1 78 26" fill="none" stroke="#64B936" stroke-width="6" stroke-linecap="round"/>
+                                        <polygon points="12,50 24,50 18,62" fill="#64B936"/>
+                                        <path d="M 82 48 A 33 33 0 0 1 28 78" fill="none" stroke="#64B936" stroke-width="6" stroke-linecap="round"/>
+                                        <polygon points="88,50 76,50 82,38" fill="#64B936"/>
+                                        <path d="M 33 62 C 24 50, 27 32, 39 27 C 46 24, 52 32, 49 46 C 47 54, 41 60, 33 62 Z" fill="#4F9E26"/>
+                                        <g transform="rotate(24 56 52)">
+                                            <path d="M 49 33 C 49 30, 63 30, 63 33 L 57 72 C 56.5 75, 55.5 75, 55 72 Z" fill="#EA7B24"/>
+                                        </g>
+                                        <circle cx="64" cy="64" r="11" fill="#D93829"/>
+                                    </svg>
+                                    <div>
+                                        <p class="font-display font-extrabold text-base leading-none text-emeraldDeep-900">GTC प्रमाणित</p>
+                                        <p class="text-[11px] font-bold text-harvestGold-600 mt-1">100% शुद्ध एवं ताज़ा माल</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ANIMATED MARQUEE TICKER -->
+            <div class="bg-harvestGold-500 text-emeraldDeep-950 py-3 overflow-hidden border-y border-emeraldDeep-900/15 font-extrabold text-xs sm:text-sm">
+                <div class="marquee-track flex items-center space-x-10">
+                    <span><i class="fa-solid fa-leaf mr-2"></i>दैनिक ताज़ी मंडी आवक — डुमरतराई थोक मंडी, रायपुर</span>
+                    <span>★</span>
+                    <span><i class="fa-solid fa-hotel mr-2"></i>होटल, रेस्टोरेंट, कैटरर्स एवं रिटेल मार्ट के लिए विशेष थोक दरें</span>
+                    <span>★</span>
+                    <span><i class="fa-solid fa-truck-fast mr-2"></i>सुबह 4:00 बजे से संपूर्ण रायपुर में त्वरित डिलीवरी</span>
+                    <span>★</span>
+                    <span><i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp: +91 70006 11356 | उमेश गुप्ता: +91 97552 91356 | राकेश गुप्ता: +91 78980 11806 | रत्नेश गुप्ता: +91 74159 36740</span>
+                    <span>★</span>
+                    <!-- Duplicate for seamless loop -->
+                    <span><i class="fa-solid fa-leaf mr-2"></i>दैनिक ताज़ी मंडी आवक — डुमरतराई थोक मंडी, रायपुर</span>
+                    <span>★</span>
+                    <span><i class="fa-solid fa-hotel mr-2"></i>होटल, रेस्टोरेंट, कैटरर्स एवं रिटेल मार्ट के लिए विशेष थोक दरें</span>
+                    <span>★</span>
+                    <span><i class="fa-solid fa-truck-fast mr-2"></i>सुबह 4:00 बजे से संपूर्ण रायपुर में त्वरित डिलीवरी</span>
+                    <span>★</span>
+                    <span><i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp: +91 70006 11356 | उमेश गुप्ता: +91 97552 91356 | राकेश गुप्ता: +91 78980 11806 | रत्नेश गुप्ता: +91 74159 36740</span>
+                    <span>★</span>
+                </div>
+            </div>
+
+            <!-- LEADERSHIP / OWNERS SECTION -->
+            <div class="py-16 sm:py-20 bg-ivoryLux relative">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-14 reveal-up">
+                        <span class="inline-block px-4 py-1.5 rounded-full bg-harvestGold-100 text-harvestGold-600 font-bold text-xs uppercase tracking-widest border border-harvestGold-500/30">
+                            हमारा नेतृत्व एवं संचालक मंडल
+                        </span>
+                        <h2 class="font-serifHindi text-3xl sm:text-4xl text-emeraldDeep-900 mt-3">विश्वास, पारदर्शिता और अनुभव की त्रिवेणी</h2>
+                        <p class="text-emeraldDeep-700 mt-3 text-sm sm:text-base">
+                            गुप्ता ट्रेडिंग कंपनी (GTC) की सफलता के पीछे हमारे तीनों संचालकों की दशकों की मंडी विशेषज्ञता और ग्राहकों के प्रति समर्पण है।
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Owner 1: Umesh Gupta -->
+                        <div class="lux-card reveal-up bg-white rounded-3xl p-7 sm:p-8 border border-emeraldDeep-900/10 shadow-sm relative overflow-hidden flex flex-col justify-between">
+                            <div class="absolute top-0 right-0 w-28 h-28 bg-harvestGold-100 rounded-bl-full -z-0"></div>
+                            <div class="relative z-10">
+                                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emeraldDeep-900 to-emeraldDeep-700 text-harvestGold-400 flex items-center justify-center shadow-md mb-5 border border-harvestGold-500/40">
+                                    <i class="fa-solid fa-crown text-2xl"></i>
+                                </div>
+                                <span class="text-xs font-bold text-harvestGold-600 uppercase tracking-wider">संस्थापक एवं वरिष्ठ संचालक</span>
+                                <h3 class="text-2xl font-extrabold text-emeraldDeep-900 mt-1">उमेश गुप्ता</h3>
+                                <p class="text-xs font-semibold text-emeraldDeep-600">Umesh Gupta • Founder & Senior Director</p>
+                                <p class="text-sm text-slate-600 mt-4 leading-relaxed">
+                                    मंडी व्यापार और थोक कृषि उपज मूल्यांकन में गहन अनुभव। किसानों से सीधा संवाद और पारदर्शी कमीशन व्यवस्था के मार्गदर्शक।
+                                </p>
+                            </div>
+                            <div class="relative z-10 mt-6 pt-4 border-t border-slate-100 space-y-2">
+                                <a href="tel:+919755291356" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-emeraldDeep-50 hover:bg-emeraldDeep-100 text-emeraldDeep-900 text-xs font-bold transition">
+                                    <span><i class="fa-solid fa-phone text-harvestGold-600 mr-2"></i>फ़ोन: +91 97552 91356</span>
+                                    <span class="text-emeraldDeep-700">कॉल करें →</span>
+                                </a>
+                                <a href="https://wa.me/917000611356" target="_blank" rel="noopener" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-limeFresh-100 hover:bg-limeFresh-500/25 text-emeraldDeep-900 text-xs font-bold transition">
+                                    <span><i class="fa-brands fa-whatsapp text-limeFresh-600 text-sm mr-2"></i>WhatsApp: +91 70006 11356</span>
+                                    <span class="text-limeFresh-600">चैट करें →</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Owner 2: Rakesh Gupta -->
+                        <div class="lux-card reveal-up bg-white rounded-3xl p-7 sm:p-8 border border-emeraldDeep-900/10 shadow-sm relative overflow-hidden flex flex-col justify-between">
+                            <div class="absolute top-0 right-0 w-28 h-28 bg-limeFresh-100 rounded-bl-full -z-0"></div>
+                            <div class="relative z-10">
+                                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emeraldDeep-900 to-limeFresh-600 text-white flex items-center justify-center shadow-md mb-5 border border-limeFresh-400/40">
+                                    <i class="fa-solid fa-seedling text-2xl"></i>
+                                </div>
+                                <span class="text-xs font-bold text-limeFresh-600 uppercase tracking-wider">थोक खरीद एवं क्वालिटी प्रमुख</span>
+                                <h3 class="text-2xl font-extrabold text-emeraldDeep-900 mt-1">राकेश गुप्ता</h3>
+                                <p class="text-xs font-semibold text-emeraldDeep-600">Rakesh Gupta • Procurement & Quality Head</p>
+                                <p class="text-sm text-slate-600 mt-4 leading-relaxed">
+                                    प्रतिदिन सुबह मंडी से सर्वोत्तम ग्रेड-A सब्ज़ियों और मौसमी फलों के चयन, सख्त छंटाई और तौल की शुद्धता के प्रमुख संचालक।
+                                </p>
+                            </div>
+                            <div class="relative z-10 mt-6 pt-4 border-t border-slate-100 space-y-2">
+                                <a href="tel:+917898011806" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-emeraldDeep-50 hover:bg-emeraldDeep-100 text-emeraldDeep-900 text-xs font-bold transition">
+                                    <span><i class="fa-solid fa-phone text-limeFresh-600 mr-2"></i>फ़ोन: +91 78980 11806</span>
+                                    <span class="text-limeFresh-600">कॉल करें →</span>
+                                </a>
+                                <div class="px-3.5 py-2 rounded-xl bg-slate-50 text-[11px] font-semibold text-slate-500 flex items-center">
+                                    <i class="fa-solid fa-check-double text-limeFresh-600 mr-2"></i>दैनिक ग्रेड-A क्वालिटी एवं तौल प्रमुख
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Owner 3: Ratnesh Gupta -->
+                        <div class="lux-card reveal-up bg-white rounded-3xl p-7 sm:p-8 border border-emeraldDeep-900/10 shadow-sm relative overflow-hidden flex flex-col justify-between">
+                            <div class="absolute top-0 right-0 w-28 h-28 bg-tomatoRed-100 rounded-bl-full -z-0"></div>
+                            <div class="relative z-10">
+                                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emeraldDeep-900 to-emeraldDeep-800 text-harvestGold-400 flex items-center justify-center shadow-md mb-5 border border-harvestGold-500/40">
+                                    <i class="fa-solid fa-truck-fast text-2xl"></i>
+                                </div>
+                                <span class="text-xs font-bold text-tomatoRed-600 uppercase tracking-wider">होटल, रेस्टोरेंट एवं सप्लाई चेन प्रमुख</span>
+                                <h3 class="text-2xl font-extrabold text-emeraldDeep-900 mt-1">रत्नेश गुप्ता</h3>
+                                <p class="text-xs font-semibold text-emeraldDeep-600">Ratnesh Gupta • HoReCa & Supply Chain Head</p>
+                                <p class="text-sm text-slate-600 mt-4 leading-relaxed">
+                                    रायपुर के प्रमुख होटलों, रेस्टोरेंट, बैंक्वेट और रिटेल स्टोरों की दैनिक ऑर्डर पूर्ति एवं समय पर डोरस्टेप डिलीवरी प्रबंधन।
+                                </p>
+                            </div>
+                            <div class="relative z-10 mt-6 pt-4 border-t border-slate-100 space-y-2">
+                                <a href="tel:+917415936740" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-emeraldDeep-50 hover:bg-emeraldDeep-100 text-emeraldDeep-900 text-xs font-bold transition">
+                                    <span><i class="fa-solid fa-phone text-tomatoRed-500 mr-2"></i>फ़ोन: +91 74159 36740</span>
+                                    <span class="text-tomatoRed-600">कॉल करें →</span>
+                                </a>
+                                <div class="px-3.5 py-2 rounded-xl bg-slate-50 text-[11px] font-semibold text-slate-500 flex items-center">
+                                    <i class="fa-solid fa-hotel text-harvestGold-600 mr-2"></i>होटल, कैटरिंग व रिटेल सप्लाई डेस्क
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INTERACTIVE SHOWCASE GALLERY WITH CATEGORY FILTER -->
+            <div class="py-16 sm:py-20 bg-emeraldDeep-50 border-y border-emeraldDeep-900/10">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6 reveal-up">
+                        <div>
+                            <span class="text-harvestGold-600 font-bold text-xs uppercase tracking-widest">विज़ुअल शोकेस एवं कार्यशैली</span>
+                            <h2 class="font-serifHindi text-3xl sm:text-4xl text-emeraldDeep-900 mt-1">हमारी ताज़गी और थोक सप्लाई की झलक</h2>
+                        </div>
+
+                        <!-- Gallery Filter Pills -->
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="filterGallery('all')" class="gal-btn px-4 py-2 rounded-xl text-xs font-bold bg-emeraldDeep-900 text-white transition" data-gal="all">सभी (6)</button>
+                            <button onclick="filterGallery('mandi')" class="gal-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-emeraldDeep-900 border border-emeraldDeep-900/15 hover:border-harvestGold-500 transition" data-gal="mandi">मंडी आवक</button>
+                            <button onclick="filterGallery('fruits')" class="gal-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-emeraldDeep-900 border border-emeraldDeep-900/15 hover:border-harvestGold-500 transition" data-gal="fruits">प्रीमियम फल</button>
+                            <button onclick="filterGallery('hotel')" class="gal-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-emeraldDeep-900 border border-emeraldDeep-900/15 hover:border-harvestGold-500 transition" data-gal="hotel">होटल व रिटेल</button>
+                        </div>
+                    </div>
+
+                    <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Gallery Item 1 -->
+                        <div data-gal-cat="mandi" class="gallery-card lux-card group relative rounded-3xl overflow-hidden shadow-md bg-emeraldDeep-900 aspect-[4/3]">
+                            <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=800&q=80" 
+                                 onerror="this.src='https://placehold.co/600x450/123C28/FAF8F3?text=ताज़ी+हरी+सब्ज़ियाँ'"
+                                 alt="ताज़ी हरी सब्ज़ियाँ" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-emeraldDeep-950/90 via-emeraldDeep-950/20 to-transparent flex flex-col justify-end p-6 text-white">
+                                <span class="text-[11px] font-bold bg-limeFresh-600 px-3 py-1 rounded-full w-fit mb-2">दैनिक हार्वेस्ट</span>
+                                <h3 class="text-lg font-bold">सुबह की ताज़ी हरी सब्ज़ियाँ</h3>
+                                <p class="text-xs text-emerald-100 mt-1">सीधे खेतों से डुमरतराई मंडी में छांटी हुई ग्रेड-A उपज</p>
+                            </div>
+                        </div>
+
+                        <!-- Gallery Item 2 -->
+                        <div data-gal-cat="fruits" class="gallery-card lux-card group relative rounded-3xl overflow-hidden shadow-md bg-emeraldDeep-900 aspect-[4/3]">
+                            <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&w=800&q=80" 
+                                 onerror="this.src='https://placehold.co/600x450/123C28/FAF8F3?text=प्रीमियम+फल'"
+                                 alt="प्रीमियम फल" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-emeraldDeep-950/90 via-emeraldDeep-950/20 to-transparent flex flex-col justify-end p-6 text-white">
+                                <span class="text-[11px] font-bold bg-harvestGold-500 text-emeraldDeep-950 px-3 py-1 rounded-full w-fit mb-2">प्रीमियम फल</span>
+                                <h3 class="text-lg font-bold">रसदार मौसमी एवं एग्ज़ॉटिक फल</h3>
+                                <p class="text-xs text-emerald-100 mt-1">होटल बुफे, जूस बार और रिटेल मार्ट के लिए थोक पेटी स्टॉक</p>
+                            </div>
+                        </div>
+
+                        <!-- Gallery Item 3 -->
+                        <div data-gal-cat="hotel" class="gallery-card lux-card group relative rounded-3xl overflow-hidden shadow-md bg-emeraldDeep-900 aspect-[4/3]">
+                            <img src="https://images.unsplash.com/photo-1518843875459-f738682238a6?auto=format&fit=crop&w=800&q=80" 
+                                 onerror="this.src='https://placehold.co/600x450/123C28/FAF8F3?text=होटल+एग्ज़ॉटिक+सब्ज़ियाँ'"
+                                 alt="होटल एग्ज़ॉटिक सब्ज़ियाँ" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-emeraldDeep-950/90 via-emeraldDeep-950/20 to-transparent flex flex-col justify-end p-6 text-white">
+                                <span class="text-[11px] font-bold bg-tomatoRed-500 px-3 py-1 rounded-full w-fit mb-2">होटल स्पेशल</span>
+                                <h3 class="text-lg font-bold">ब्रोकली, बेल पेपर व सलाद वैरायटी</h3>
+                                <p class="text-xs text-emerald-100 mt-1">फाइन-डाइन रेस्टोरेंट और कॉन्टिनेंटल किचन की विशेष मांग</p>
+                            </div>
+                        </div>
+
+                        <!-- Gallery Item 4 -->
+                        <div data-gal-cat="mandi" class="gallery-card lux-card group relative rounded-3xl overflow-hidden shadow-md bg-emeraldDeep-900 aspect-[4/3]">
+                            <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80" 
+                                 onerror="this.src='https://placehold.co/600x450/123C28/FAF8F3?text=हाइजीनिक+क्रेट+पैकिंग'"
+                                 alt="हाइजीनिक क्रेट पैकिंग" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-emeraldDeep-950/90 via-emeraldDeep-950/20 to-transparent flex flex-col justify-end p-6 text-white">
+                                <span class="text-[11px] font-bold bg-limeFresh-600 px-3 py-1 rounded-full w-fit mb-2">स्वच्छ लॉजिस्टिक्स</span>
+                                <h3 class="text-lg font-bold">मानक क्रेट पैकेजिंग एवं लोडिंग</h3>
+                                <p class="text-xs text-emerald-100 mt-1">बिना किसी टूट-फूट के सुरक्षित डोरस्टेप डिलीवरी व्यवस्था</p>
+                            </div>
+                        </div>
+
+                        <!-- Gallery Item 5 -->
+                        <div data-gal-cat="mandi" class="gallery-card lux-card group relative rounded-3xl overflow-hidden shadow-md bg-emeraldDeep-900 aspect-[4/3]">
+                            <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=800&q=80" 
+                                 onerror="this.src='https://placehold.co/600x450/123C28/FAF8F3?text=आलू+प्याज़+टमाटर+थोक'"
+                                 alt="आलू प्याज़ टमाटर थोक" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-emeraldDeep-950/90 via-emeraldDeep-950/20 to-transparent flex flex-col justify-end p-6 text-white">
+                                <span class="text-[11px] font-bold bg-harvestGold-500 text-emeraldDeep-950 px-3 py-1 rounded-full w-fit mb-2">थोक भंडारण</span>
+                                <h3 class="text-lg font-bold">आलू, प्याज़ व टमाटर का विशाल स्टॉक</h3>
+                                <p class="text-xs text-emerald-100 mt-1">साल भर एक समान गुणवत्ता और पारदर्शी मंडी कमीशन दरें</p>
+                            </div>
+                        </div>
+
+                        <!-- Gallery Item 6 -->
+                        <div data-gal-cat="hotel" class="gallery-card lux-card group relative rounded-3xl overflow-hidden shadow-md bg-emeraldDeep-900 aspect-[4/3]">
+                            <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&w=800&q=80" 
+                                 onerror="this.src='https://placehold.co/600x450/123C28/FAF8F3?text=रिटेल+सप्लाई'"
+                                 alt="रिटेल सप्लाई" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-emeraldDeep-950/90 via-emeraldDeep-950/20 to-transparent flex flex-col justify-end p-6 text-white">
+                                <span class="text-[11px] font-bold bg-tomatoRed-500 px-3 py-1 rounded-full w-fit mb-2">रिटेल पार्टनर</span>
+                                <h3 class="text-lg font-bold">रिटेल सुपरमार्केट एवं वेजिटेबल शॉप</h3>
+                                <p class="text-xs text-emerald-100 mt-1">रायपुर के सभी प्रमुख बाजारों में नियमित थोक सप्लाई</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- PAGE 2: थोक उत्पाद स्टोर (WHOLESALE STORE & CATALOG)   -->
+        <!-- ===================================================== -->
+        <section id="page-store" class="page-section hidden py-12 sm:py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Luxury Store Header -->
+                <div class="bg-gradient-to-r from-emeraldDeep-900 to-emeraldDeep-800 text-ivoryLux rounded-3xl p-6 sm:p-10 shadow-xl border border-harvestGold-500/30 mb-8">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div>
+                            <span class="inline-block px-3.5 py-1 rounded-full bg-harvestGold-500/20 text-harvestGold-400 border border-harvestGold-500/40 text-xs font-bold mb-2">
+                                GTC दैनिक थोक मंडी मूल्य सूची
+                            </span>
+                            <h1 class="font-serifHindi text-2xl sm:text-4xl text-white">थोक उत्पाद स्टोर (B2B डिजिटल कैटलॉग)</h1>
+                            <p class="text-sm text-emerald-100/90 mt-1.5">अपने होटल, रेस्टोरेंट या रिटेल स्टोर के लिए उत्पाद चुनें और सीधे व्हाट्सएप या ऑनलाइन थोक ऑर्डर भेजें।</p>
+                        </div>
+
+                        <!-- Search Input -->
+                        <div class="relative w-full lg:w-80">
+                            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-emeraldDeep-700"></i>
+                            <input type="text" id="product-search" oninput="filterProducts()" placeholder="सब्ज़ी या फल खोजें (जैसे: टमाटर, सेब)..." 
+                                   class="w-full pl-11 pr-4 py-3.5 rounded-2xl bg-white text-emeraldDeep-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-harvestGold-500 text-sm font-medium shadow">
+                        </div>
+                    </div>
+
+                    <!-- Category Tabs -->
+                    <div class="flex flex-wrap items-center gap-2.5 mt-7 pt-6 border-t border-white/15">
+                        <button onclick="setCategory('all')" id="cat-all" class="cat-btn px-5 py-2.5 rounded-xl font-bold text-sm bg-harvestGold-500 text-emeraldDeep-950 shadow transition">
+                            सभी उत्पाद (12)
+                        </button>
+                        <button onclick="setCategory('vegetables')" id="cat-vegetables" class="cat-btn px-5 py-2.5 rounded-xl font-bold text-sm bg-white/10 text-white hover:bg-white/20 transition">
+                            <i class="fa-solid fa-carrot mr-1.5 text-harvestGold-400"></i>ताज़ी सब्ज़ियाँ
+                        </button>
+                        <button onclick="setCategory('fruits')" id="cat-fruits" class="cat-btn px-5 py-2.5 rounded-xl font-bold text-sm bg-white/10 text-white hover:bg-white/20 transition">
+                            <i class="fa-solid fa-apple-whole mr-1.5 text-tomatoRed-400"></i>मौसमी फल
+                        </button>
+                        <button onclick="setCategory('exotic')" id="cat-exotic" class="cat-btn px-5 py-2.5 rounded-xl font-bold text-sm bg-white/10 text-white hover:bg-white/20 transition">
+                            <i class="fa-solid fa-leaf mr-1.5 text-limeFresh-400"></i>एग्ज़ॉटिक व होटल स्पेशल
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dynamic Product Grid -->
+                <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- Rendered via JS -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- PAGE 3: बुकिंग एवं संपर्क (BOOKING, QUOTES & CONTACTS)  -->
+        <!-- ===================================================== -->
+        <section id="page-booking" class="page-section hidden py-12 sm:py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="px-4 py-1.5 rounded-full bg-harvestGold-100 text-harvestGold-600 text-xs font-bold border border-harvestGold-500/30">
+                        सीधा संपर्क एवं अपॉइंटमेंट डेस्क
+                    </span>
+                    <h1 class="font-serifHindi text-3xl sm:text-4xl text-emeraldDeep-900 mt-3">थोक सप्लाई बुकिंग एवं व्यापारिक पूछताछ</h1>
+                    <p class="text-emeraldDeep-700 mt-2 text-sm sm:text-base">
+                        सैंपल विज़िट बुक करें, दैनिक मंडी भाव मंगवाएं या हमारे संचालकों से सीधे फ़ोन/व्हाट्सएप पर जुड़ें।
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    
+                    <!-- Left 7 Columns: Appointment & Direct WhatsApp Automation Forms -->
+                    <div class="lg:col-span-7 space-y-8">
+                        
+                        <!-- Form 1: Sample Visit / Meeting Appointment -->
+                        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-emeraldDeep-900/10 shadow-sm">
+                            <div class="flex items-center space-x-3.5 mb-6">
+                                <div class="w-12 h-12 rounded-2xl bg-emeraldDeep-900 text-harvestGold-400 flex items-center justify-center text-xl shadow">
+                                    <i class="fa-regular fa-calendar-check"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-xl font-extrabold text-emeraldDeep-900">अपॉइंटमेंट / सैंपल विज़िट बुक करें</h2>
+                                    <p class="text-xs text-slate-500">होटल शेफ, परचेज़ मैनेजर एवं रिटेलर्स के लिए ऑन-साइट मीटिंग</p>
+                                </div>
+                            </div>
+
+                            <form id="appointment-form" onsubmit="handleAppointmentSubmit(event)" class="space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-bold text-emeraldDeep-900 mb-1.5">आपका शुभ नाम *</label>
+                                        <input type="text" required placeholder="उदा. अमित शर्मा" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-emeraldDeep-800 text-sm">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold text-emeraldDeep-900 mb-1.5">मोबाइल / व्हाट्सएप नंबर *</label>
+                                        <input type="tel" required placeholder="उदा. 70006 XXXXX" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-emeraldDeep-800 text-sm">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-bold text-emeraldDeep-900 mb-1.5">व्यवसाय श्रेणी *</label>
+                                        <select required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-emeraldDeep-800 text-sm bg-white">
+                                            <option value="होटल / रिसॉर्ट">होटल / रिसॉर्ट</option>
+                                            <option value="रेस्टोरेंट / कैफे">रेस्टोरेंट / कैफे</option>
+                                            <option value="रिटेल सप्लायर / दुकान">रिटेल सप्लायर / सब्ज़ी मार्ट</option>
+                                            <option value="कैटरिंग / बैंक्वेट">कैटरिंग / बैंक्वेट हॉल</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold text-emeraldDeep-900 mb-1.5">होटल / दुकान का नाम *</label>
+                                        <input type="text" required placeholder="उदा. होटल ग्रैंड रायपुर" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-emeraldDeep-800 text-sm">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-bold text-emeraldDeep-900 mb-1.5">पसंदीदा दिनांक *</label>
+                                        <input type="date" id="booking-date" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-emeraldDeep-800 text-sm">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold text-emeraldDeep-900 mb-1.5">मीटिंग का समय *</label>
+                                        <select required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-emeraldDeep-800 text-sm bg-white">
+                                            <option value="सुबह 6:00 - 9:00 (मंडी सैंपल विज़िट)">सुबह 6:00 - 9:00 (मंडी सैंपल विज़िट)</option>
+                                            <option value="सुबह 11:00 - दोपहर 2:00 (ऑन-साइट मीटिंग)">सुबह 11:00 - दोपहर 2:00 (ऑन-साइट मीटिंग)</option>
+                                            <option value="शाम 5:00 - रात 8:00 (रेस्टोरेंट शेफ मीटिंग)">शाम 5:00 - रात 8:00 (रेस्टोरेंट शेफ मीटिंग)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-emeraldDeep-900 hover:bg-emeraldDeep-800 text-ivoryLux font-bold text-sm shadow-md border border-harvestGold-500/40 transition">
+                                    <i class="fa-solid fa-calendar-check text-harvestGold-400 mr-2"></i>अपॉइंटमेंट कन्फर्म करें
+                                </button>
+
+                                <div id="appointment-success" class="hidden p-4 rounded-xl bg-limeFresh-100 border border-limeFresh-500/40 text-emeraldDeep-900 text-xs font-bold">
+                                    <i class="fa-solid fa-circle-check text-limeFresh-600 mr-1.5"></i>धन्यवाद! आपका अपॉइंटमेंट दर्ज कर लिया गया है। हमारी टीम शीघ्र ही आपसे संपर्क करेगी।
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Form 2: Direct WhatsApp Automation Rate List Request -->
+                        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-emeraldDeep-900/10 shadow-sm">
+                            <div class="flex items-center space-x-3.5 mb-6">
+                                <div class="w-12 h-12 rounded-2xl bg-limeFresh-600 text-white flex items-center justify-center text-xl shadow">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-xl font-extrabold text-emeraldDeep-900">डायरेक्ट व्हाट्सएप पर दैनिक मंडी रेट लिस्ट मंगवाएं</h2>
+                                    <p class="text-xs text-slate-500">ऑफिशियल व्हाट्सएप नंबर: <strong>+91 70006 11356</strong> पर तुरंत संदेश भेजें</p>
+                                </div>
+                            </div>
+
+                            <form id="whatsapp-quote-form" onsubmit="sendDirectWhatsAppQuote(event)" class="space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-bold text-emeraldDeep-900 mb-1.5">आपका नाम / संस्थान *</label>
+                                        <input type="text" id="wa-client-name" required placeholder="उदा. ताज होटल / शर्मा वेज मार्ट" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-limeFresh-600 text-sm">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold text-emeraldDeep-900 mb-1.5">अनुमानित दैनिक खपत (किग्रा) *</label>
+                                        <select id="wa-daily-volume" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-limeFresh-600 text-sm bg-white">
+                                            <option value="25 - 50 किग्रा प्रतिदिन">25 - 50 किग्रा प्रतिदिन</option>
+                                            <option value="50 - 150 किग्रा प्रतिदिन">50 - 150 किग्रा प्रतिदिन</option>
+                                            <option value="150+ किग्रा प्रतिदिन (मेगा होटल / कैटरर)">150+ किग्रा प्रतिदिन (मेगा होटल / कैटरर)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-bold text-emeraldDeep-900 mb-1.5">मुख्य आवश्यक सब्ज़ियाँ / फल</label>
+                                    <textarea id="wa-items-note" rows="2" placeholder="उदा. टमाटर, प्याज़, आलू, हरी सब्ज़ियाँ, मौसमी फल..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-limeFresh-600 text-sm"></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-limeFresh-600 hover:bg-limeFresh-500 text-white font-extrabold text-sm shadow-md transition flex items-center justify-center">
+                                    <i class="fa-brands fa-whatsapp text-lg mr-2"></i>WhatsApp (+91 70006 11356) पर तुरंत संदेश भेजें
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <!-- Right 5 Columns: Complete Contact Directory (All Proprietor Numbers + Official WhatsApp) -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div class="bg-gradient-to-br from-emeraldDeep-950 via-emeraldDeep-900 to-emeraldDeep-800 text-ivoryLux rounded-3xl p-7 sm:p-8 shadow-2xl border border-harvestGold-500/35">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="bg-white p-1.5 rounded-xl shrink-0">
+                                    <svg viewBox="0 0 100 100" class="w-10 h-10" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M 18 52 A 33 33 0 0 1 78 26" fill="none" stroke="#64B936" stroke-width="6" stroke-linecap="round"/>
+                                        <polygon points="12,50 24,50 18,62" fill="#64B936"/>
+                                        <path d="M 82 48 A 33 33 0 0 1 28 78" fill="none" stroke="#64B936" stroke-width="6" stroke-linecap="round"/>
+                                        <polygon points="88,50 76,50 82,38" fill="#64B936"/>
+                                        <path d="M 33 62 C 24 50, 27 32, 39 27 C 46 24, 52 32, 49 46 C 47 54, 41 60, 33 62 Z" fill="#4F9E26"/>
+                                        <g transform="rotate(24 56 52)">
+                                            <path d="M 49 33 C 49 30, 63 30, 63 33 L 57 72 C 56.5 75, 55.5 75, 55 72 Z" fill="#EA7B24"/>
+                                        </g>
+                                        <circle cx="64" cy="64" r="11" fill="#D93829"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h2 class="text-xl font-extrabold text-white">गुप्ता ट्रेडिंग कंपनी (GTC)</h2>
+                                    <p class="text-xs text-harvestGold-400 font-semibold">Vegetable Commission Agency & Wholesale</p>
+                                </div>
+                            </div>
+
+                            <!-- Official WhatsApp Desk Banner -->
+                            <div class="p-4 rounded-2xl bg-limeFresh-500/20 border border-limeFresh-400/50 mb-4">
+                                <div class="flex items-center justify-between gap-2">
+                                    <div>
+                                        <span class="text-[11px] font-extrabold text-limeFresh-400 uppercase tracking-wider">ऑफिशियल व्हाट्सएप ऑर्डर नंबर</span>
+                                        <p class="font-display text-lg font-extrabold text-white mt-0.5">+91 70006 11356</p>
+                                        <p class="text-[11px] text-emerald-200">थोक रेट लिस्ट व दैनिक ऑर्डर के लिए</p>
+                                    </div>
+                                    <a href="https://wa.me/917000611356?text=नमस्ते%20गुप्ता%20ट्रेडिंग%20कंपनी%20(GTC),%20हमें%20थोक%20ऑर्डर%20और%20रेट%20लिस्ट%20की%20जानकारी%20चाहिए।" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-xl bg-limeFresh-500 hover:bg-limeFresh-400 text-emeraldDeep-950 font-extrabold text-xs flex items-center shadow transition shrink-0">
+                                        <i class="fa-brands fa-whatsapp text-base mr-1.5"></i>चैट करें
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Individual Proprietor Contact Cards -->
+                            <div class="space-y-3">
+                                <!-- Umesh Gupta -->
+                                <div class="p-3.5 rounded-2xl bg-white/5 border border-white/15">
+                                    <div class="flex items-center justify-between gap-2">
+                                        <div>
+                                            <span class="text-[11px] font-bold text-harvestGold-400 uppercase">उमेश गुप्ता (संस्थापक एवं वरिष्ठ संचालक)</span>
+                                            <p class="font-display text-base font-extrabold text-white mt-0.5">+91 97552 91356</p>
+                                        </div>
+                                        <a href="tel:+919755291356" class="px-3.5 py-2 rounded-xl bg-harvestGold-500 hover:bg-harvestGold-400 text-emeraldDeep-950 font-bold text-xs flex items-center transition shrink-0">
+                                            <i class="fa-solid fa-phone mr-1.5"></i>कॉल करें
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Rakesh Gupta -->
+                                <div class="p-3.5 rounded-2xl bg-white/5 border border-white/15">
+                                    <div class="flex items-center justify-between gap-2">
+                                        <div>
+                                            <span class="text-[11px] font-bold text-limeFresh-400 uppercase">राकेश गुप्ता (खरीद एवं क्वालिटी प्रमुख)</span>
+                                            <p class="font-display text-base font-extrabold text-white mt-0.5">+91 78980 11806</p>
+                                        </div>
+                                        <a href="tel:+917898011806" class="px-3.5 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold text-xs flex items-center transition shrink-0">
+                                            <i class="fa-solid fa-phone mr-1.5"></i>कॉल करें
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Ratnesh Gupta -->
+                                <div class="p-3.5 rounded-2xl bg-white/5 border border-white/15">
+                                    <div class="flex items-center justify-between gap-2">
+                                        <div>
+                                            <span class="text-[11px] font-bold text-emerald-300 uppercase">रत्नेश गुप्ता (होटल एवं सप्लाई चेन प्रमुख)</span>
+                                            <p class="font-display text-base font-extrabold text-white mt-0.5">+91 74159 36740</p>
+                                        </div>
+                                        <a href="tel:+917415936740" class="px-3.5 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold text-xs flex items-center transition shrink-0">
+                                            <i class="fa-solid fa-phone mr-1.5"></i>कॉल करें
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Address & Hours -->
+                            <div class="mt-6 pt-5 border-t border-white/15 space-y-2.5 text-xs text-emerald-100">
+                                <p class="flex items-start">
+                                    <i class="fa-solid fa-location-dot text-harvestGold-400 text-sm mr-2.5 mt-0.5"></i>
+                                    <span><strong>पता:</strong> थोक सब्ज़ी एवं फल मंडी, डुमरतराई, धमतरी रोड, रायपुर, छत्तीसगढ़ - 492015</span>
+                                </p>
+                                <p class="flex items-center">
+                                    <i class="fa-regular fa-clock text-harvestGold-400 text-sm mr-2.5"></i>
+                                    <span><strong>समय:</strong> प्रतिदिन सुबह 4:00 बजे से रात 9:00 बजे तक</span>
+                                </p>
+                            </div>
+
+                            <button onclick="copyAllContacts()" class="w-full mt-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-harvestGold-400 font-bold text-xs border border-harvestGold-500/30 transition">
+                                <i class="fa-regular fa-copy mr-2"></i>सभी संपर्क नंबर कॉपी करें
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================================= -->
+    <!-- FLOATING WHATSAPP DIRECT BUTTON (OFFICIAL: 7000611356)    -->
+    <!-- ========================================================= -->
+    <a href="https://wa.me/917000611356?text=नमस्ते%20GTC%20(गुप्ता%20ट्रेडिंग%20कंपनी),%20हमें%20थोक%20ऑर्डर%20देना%20है।" 
+       target="_blank" rel="noopener"
+       class="whatsapp-pulse fixed bottom-5 right-5 z-40 flex items-center space-x-2.5 bg-limeFresh-600 hover:bg-limeFresh-500 text-white px-4 py-3.5 rounded-full shadow-2xl border-2 border-white transition transform hover:scale-105">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="hidden sm:inline font-bold text-sm">WhatsApp: 7000611356</span>
+    </a>
+
+    <!-- ========================================================= -->
+    <!-- SLIDE-OVER WHOLESALE CART DRAWER                          -->
+    <!-- ========================================================= -->
+    <div id="cart-drawer-backdrop" onclick="toggleCartDrawer(false)" class="fixed inset-0 bg-emeraldDeep-950/60 backdrop-blur-xs z-50 hidden transition-opacity"></div>
+    
+    <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-ivoryLux z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col border-l border-harvestGold-500/30">
+        <div class="p-5 border-b border-emeraldDeep-900/10 flex items-center justify-between bg-emeraldDeep-900 text-ivoryLux">
+            <div class="flex items-center space-x-2.5">
+                <i class="fa-solid fa-basket-shopping text-harvestGold-400 text-xl"></i>
+                <div>
+                    <h2 class="font-extrabold text-base sm:text-lg">GTC थोक ऑर्डर सूची</h2>
+                    <p class="text-[11px] text-emerald-200">अनुमानित मंडी भाव एवं मात्रा समीक्षा</p>
+                </div>
+            </div>
+            <button onclick="toggleCartDrawer(false)" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center" aria-label="बंद करें">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div id="cart-items-container" class="flex-grow overflow-y-auto p-5 space-y-3.5">
+            <!-- Cart Items -->
+        </div>
+
+        <div class="p-5 border-t border-emeraldDeep-900/10 bg-white space-y-3.5">
+            <div class="flex justify-between items-center text-sm">
+                <span class="text-slate-600 font-semibold">कुल चुने गए आइटम:</span>
+                <span id="cart-total-items" class="font-extrabold text-emeraldDeep-900">0 आइटम</span>
+            </div>
+            <div class="flex justify-between items-center text-base">
+                <span class="font-bold text-emeraldDeep-900">अनुमानित कुल राशि:</span>
+                <span id="cart-total-amount" class="font-display text-xl font-extrabold text-limeFresh-600">₹0</span>
+            </div>
+
+            <form id="cart-checkout-form" onsubmit="submitWholesaleOrder(event)" class="space-y-2.5 pt-2">
+                <input type="text" id="order-business-name" required placeholder="होटल / रेस्टोरेंट / दुकान का नाम *" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-emeraldDeep-800">
+                <input type="tel" id="order-phone" required placeholder="आपका मोबाइल नंबर *" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-emeraldDeep-800">
+                <button type="submit" class="w-full py-3.5 px-5 rounded-xl bg-emeraldDeep-900 hover:bg-emeraldDeep-800 text-ivoryLux font-bold text-sm shadow-md border border-harvestGold-500/40 transition">
+                    <i class="fa-brands fa-whatsapp text-limeFresh-400 mr-1.5 text-base"></i>व्हाट्सएप पर थोक ऑर्डर भेजें
+                </button>
+            </form>
+        </div>
+    </aside>
+
+    <!-- Custom Toast Banner -->
+    <div id="toast-notification" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 hidden bg-emeraldDeep-950 text-ivoryLux border border-harvestGold-500/50 px-5 py-3.5 rounded-2xl shadow-2xl flex items-center space-x-3 text-sm font-semibold max-w-md w-[92%]">
+        <i class="fa-solid fa-circle-check text-limeFresh-400 text-lg shrink-0"></i>
+        <span id="toast-message">संदेश</span>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- LUXURY FOOTER WITH OWNERS & ALL CONTACT NUMBERS           -->
+    <!-- ========================================================= -->
+    <footer class="bg-emeraldDeep-950 text-emerald-100/80 pt-14 pb-8 border-t border-harvestGold-500/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-white/10">
+                
+                <!-- Brand & Logo -->
+                <div class="space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <div class="bg-white p-1 rounded-xl">
+                            <svg viewBox="0 0 100 100" class="w-9 h-9" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 18 52 A 33 33 0 0 1 78 26" fill="none" stroke="#64B936" stroke-width="6" stroke-linecap="round"/>
+                                <polygon points="12,50 24,50 18,62" fill="#64B936"/>
+                                <path d="M 82 48 A 33 33 0 0 1 28 78" fill="none" stroke="#64B936" stroke-width="6" stroke-linecap="round"/>
+                                <polygon points="88,50 76,50 82,38" fill="#64B936"/>
+                                <path d="M 33 62 C 24 50, 27 32, 39 27 C 46 24, 52 32, 49 46 C 47 54, 41 60, 33 62 Z" fill="#4F9E26"/>
+                                <g transform="rotate(24 56 52)">
+                                    <path d="M 49 33 C 49 30, 63 30, 63 33 L 57 72 C 56.5 75, 55.5 75, 55 72 Z" fill="#EA7B24"/>
+                                </g>
+                                <circle cx="64" cy="64" r="11" fill="#D93829"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="block text-lg font-extrabold text-white leading-none">GTC • गुप्ता ट्रेडिंग कंपनी</span>
+                            <span class="block text-[10px] text-harvestGold-400 font-bold mt-1">VEGETABLE COMMISSION AGENCY</span>
+                        </div>
+                    </div>
+                    <p class="text-xs leading-relaxed text-emerald-200/75">
+                        रायपुर (छत्तीसगढ़) के होटलों, रेस्टोरेंट, कैटरर्स और रिटेल सप्लायर्स के लिए ताज़ी सब्ज़ियों और उच्च गुणवत्ता वाले फलों का प्रीमियम थोक सप्लाई केंद्र।
+                    </p>
+                </div>
+
+                <!-- Owners / Proprietors -->
+                <div>
+                    <h4 class="text-harvestGold-400 font-bold text-sm mb-4">प्रोप्राइटर (संचालक मंडल)</h4>
+                    <ul class="space-y-2.5 text-xs font-semibold text-white">
+                        <li>
+                            <i class="fa-solid fa-crown text-harvestGold-400 mr-2"></i>उमेश गुप्ता: 
+                            <a href="tel:+919755291356" class="text-emerald-200 hover:text-harvestGold-400">+91 97552 91356</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-seedling text-limeFresh-400 mr-2"></i>राकेश गुप्ता: 
+                            <a href="tel:+917898011806" class="text-emerald-200 hover:text-harvestGold-400">+91 78980 11806</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-truck-fast text-harvestGold-400 mr-2"></i>रत्नेश गुप्ता: 
+                            <a href="tel:+917415936740" class="text-emerald-200 hover:text-harvestGold-400">+91 74159 36740</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-harvestGold-400 font-bold text-sm mb-4">त्वरित लिंक</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><button onclick="navigateTo('home')" class="hover:text-harvestGold-400 transition">मुख्य पृष्ठ एवं गैलरी</button></li>
+                        <li><button onclick="navigateTo('store')" class="hover:text-harvestGold-400 transition">थोक उत्पाद स्टोर (दैनिक दरें)</button></li>
+                        <li><button onclick="navigateTo('booking')" class="hover:text-harvestGold-400 transition">अपॉइंटमेंट एवं कोटेशन बुकिंग</button></li>
+                        <li><button onclick="toggleCartDrawer(true)" class="hover:text-harvestGold-400 transition">मेरी थोक ऑर्डर सूची</button></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Numbers -->
+                <div>
+                    <h4 class="text-harvestGold-400 font-bold text-sm mb-4">ऑफिशियल व्हाट्सएप एवं पता</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="https://wa.me/917000611356" target="_blank" rel="noopener" class="text-limeFresh-400 font-bold hover:underline"><i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp: +91 70006 11356</a></li>
+                        <li><a href="tel:+919755291356" class="text-white font-semibold hover:text-harvestGold-400"><i class="fa-solid fa-phone mr-2 text-harvestGold-400"></i>उमेश गुप्ता: +91 97552 91356</a></li>
+                        <li><a href="tel:+917898011806" class="text-white font-semibold hover:text-harvestGold-400"><i class="fa-solid fa-phone mr-2 text-harvestGold-400"></i>राकेश गुप्ता: +91 78980 11806</a></li>
+                        <li><a href="tel:+917415936740" class="text-white font-semibold hover:text-harvestGold-400"><i class="fa-solid fa-phone mr-2 text-harvestGold-400"></i>रत्नेश गुप्ता: +91 74159 36740</a></li>
+                        <li class="pt-1 text-emerald-200/75"><i class="fa-solid fa-location-dot mr-2 text-harvestGold-400"></i>डुमरतराई थोक मंडी, रायपुर (छ.ग.)</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-emerald-200/60 gap-3">
+                <p>© 2026 गुप्ता ट्रेडिंग कंपनी (GTC), रायपुर (छत्तीसगढ़)। सर्वाधिकार सुरक्षित।</p>
+                <p>उमेश गुप्ता • राकेश गुप्ता • रत्नेश गुप्ता</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================================= -->
+    <!-- JAVASCRIPT: PARALLAX, STORE, CART, WHATSAPP DISPATCH      -->
+    <!-- ========================================================= -->
+    <script>
+        // 1. Wholesale Catalog Data
+        const products = [
+            { id: 1, name: "ताज़ा देसी टमाटर (ग्रेड-A)", category: "vegetables", categoryLabel: "ताज़ी सब्ज़ियाँ", price: 24, unit: "किग्रा", minQty: 25, step: 5, grade: "होटल ग्रेवी व सलाद क्वालिटी", image: "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=600&q=80", fallback: "https://placehold.co/400x300/123C28/FAF8F3?text=ताज़ा+टमाटर" },
+            { id: 2, name: "नासिक लाल प्याज़ (थोक)", category: "vegetables", categoryLabel: "ताज़ी सब्ज़ियाँ", price: 28, unit: "किग्रा", minQty: 50, step: 10, grade: "सूखा एवं बड़ा आकार", image: "https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?auto=format&fit=crop&w=600&q=80", fallback: "https://placehold.co/400x300/123C28/FAF8F3?text=लाल+प्याज़" },
+            { id: 3, name: "ज्योति आलू (छांटा हुआ)", category: "vegetables", categoryLabel: "ताज़ी सब्ज़ियाँ", price: 20, unit: "किग्रा", minQty: 50, step: 10, grade: "चिप्स व सब्जी स्पेशल", image: "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=600&q=80", fallback: "https://placehold.co/400x300/123C28/FAF8F3?text=आलू+थोक" },
+            { id: 4, name: "हरी शिमला मिर्च (कैप्सिकम)", category: "vegetables", categoryLabel: "ताज़ी सब्ज़ियाँ", price: 45, unit: "किग्रा", minQty: 10, step: 5, grade: "ताज़ी व चमकदार ग्रेड-A", image: "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?auto=format&fit=crop&w=600&q=80", fallback: "https://placehold.co/400x300/123C28/FAF8F3?text=शिमला+मिर्च" },
+            { id: 5, name: "ताज़ी फूलगोभी व पत्तागोभी", category: "vegetables", categoryLabel: "ताज़ी सब्ज़ियाँ", price: 26, unit: "किग्रा", minQty: 20, step: 5, grade: "बिना दाग, सुबह की कटाई", image: "https://images.unsplash.com/photo-1568584711075-3d021a7c3ca3?auto=format&fit=crop&w=600&q=80", fallback: "https://placehold.co/400x300/123C28/FAF8F3?text=फूलगोभी" },
+            { id: 6, name: "ताज़ी भिंडी (लेडी फिंगर)", category: "vegetables", categoryLabel: "ताज़ी सब्ज़ियाँ", price: 38, unit: "किग्रा", minQty: 15, step: 5, grade: "नरम व एक समान साइज", image: "https://images.unsplash.com/photo-1425543103986-22abb7d7e8d2?auto=format&fit=crop&w=600&q=80", fallback: "https://placehold.co/400x300/123C28/FAF8F3?text=ताज़ी+भिंडी" },
+            { id: 7, name: "रॉयल गाला / शिमला सेब", category: "fruits", categoryLabel: "मौसमी फल", price: 135, unit: "किग्रा", minQty: 20, step: 5, grade: "प्रीमियम पेटी पैक", image: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=600&q=80", fallback: "https://placehold.co/400x300/123C28/FAF8F3?text=शिमला+सेब" },
+            { id: 8, name: "पके हुए पीले केले (क्रेट)", category: "fruits", categoryLabel: "मौसमी फल", price: 36, unit: "किग्रा", minQty: 25, step: 5, grade: "होटल ब्रेकफास्ट व जूस बार", image: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=600&q=80", fallback: "https://placehold.co/400x300/123C28/FAF8F3?text=ताज़े+केले" },
+            { id: 9, name: "भगवा अनार (प्रीमियम ग्रेड)", category: "fruits", categoryLabel: "मौसमी फल", price: 115, unit: "किग्रा", minQty: 15, step: 5, grade: "गहरे लाल दाने, जूस व बुफे", image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=600&q=80", fallback: "https://placehold.co/400x300/123C28/FAF8F3?text=भगवा+अनार" },
+            { id: 10, name: "ताज़ा पपीता (डिस्को वैरायटी)", category: "fruits", categoryLabel: "मौसमी फल", price: 34, unit: "किग्रा", minQty: 20, step: 5, grade: "मीठा एवं पका हुआ स्टॉक", image: "https://images.unsplash.com/photo-1517282009859-f000ec3b26fe?auto=format&fit=crop&w=600&q=80", fallback: "https://placehold.co/400x300/123C28/FAF8F3?text=ताज़ा+पपीता" },
+            { id: 11, name: "ताज़ी हरी ब्रोकली (Broccoli)", category: "exotic", categoryLabel: "एग्ज़ॉटिक स्पेशल", price: 85, unit: "किग्रा", minQty: 5, step: 5, grade: "कॉन्टिनेंटल किचन ग्रेड", image: "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?auto=format&fit=crop&w=600&q=80", fallback: "https://placehold.co/400x300/123C28/FAF8F3?text=हरी+ब्रोकली" },
+            { id: 12, name: "लाल व पीली बेल पेपर + हर्ब्स", category: "exotic", categoryLabel: "एग्ज़ॉटिक स्पेशल", price: 110, unit: "किग्रा", minQty: 5, step: 5, grade: "होटल सलाद व गार्निश स्पेशल", image: "https://images.unsplash.com/photo-1525607551316-4a8e16d1f9ba?auto=format&fit=crop&w=600&q=80", fallback: "https://placehold.co/400x300/123C28/FAF8F3?text=बेल+पेपर" }
+        ];
+
+        let currentCategory = 'all';
+        let cart = [];
+
+        // 2. Navigation Logic
+        function navigateTo(pageId) {
+            document.querySelectorAll('.page-section').forEach(sec => sec.classList.add('hidden'));
+            const target = document.getElementById(`page-${pageId}`);
+            if (target) target.classList.remove('hidden');
+
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('bg-emeraldDeep-900', 'text-ivoryLux', 'shadow-sm');
+                btn.classList.add('text-emeraldDeep-800');
+            });
+            const activeBtn = document.getElementById(`nav-${pageId}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('text-emeraldDeep-800');
+                activeBtn.classList.add('bg-emeraldDeep-900', 'text-ivoryLux', 'shadow-sm');
+            }
+
+            ['home', 'store', 'booking'].forEach(p => {
+                const mBtn = document.getElementById(`m-nav-${p}`);
+                if (mBtn) {
+                    if (p === pageId) {
+                        mBtn.classList.add('bg-emeraldDeep-900', 'text-ivoryLux');
+                        mBtn.classList.remove('text-emeraldDeep-900');
+                    } else {
+                        mBtn.classList.remove('bg-emeraldDeep-900', 'text-ivoryLux');
+                        mBtn.classList.add('text-emeraldDeep-900');
+                    }
+                }
+            });
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        // 3. Gallery Filter Logic
+        function filterGallery(cat) {
+            document.querySelectorAll('.gal-btn').forEach(btn => {
+                if (btn.dataset.gal === cat) {
+                    btn.classList.add('bg-emeraldDeep-900', 'text-white');
+                    btn.classList.remove('bg-white', 'text-emeraldDeep-900');
+                } else {
+                    btn.classList.remove('bg-emeraldDeep-900', 'text-white');
+                    btn.classList.add('bg-white', 'text-emeraldDeep-900');
+                }
+            });
+
+            document.querySelectorAll('.gallery-card').forEach(card => {
+                if (cat === 'all' || card.dataset.galCat === cat) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        // 4. Store Product Rendering
+        function setCategory(cat) {
+            currentCategory = cat;
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.classList.remove('bg-harvestGold-500', 'text-emeraldDeep-950', 'shadow');
+                btn.classList.add('bg-white/10', 'text-white');
+            });
+            const active = document.getElementById(`cat-${cat}`);
+            if (active) {
+                active.classList.remove('bg-white/10', 'text-white');
+                active.classList.add('bg-harvestGold-500', 'text-emeraldDeep-950', 'shadow');
+            }
+            filterProducts();
+        }
+
+        function filterProducts() {
+            const q = document.getElementById('product-search').value.toLowerCase().trim();
+            const list = products.filter(p => {
+                const matchCat = currentCategory === 'all' || p.category === currentCategory;
+                const matchText = p.name.toLowerCase().includes(q) || p.grade.toLowerCase().includes(q);
+                return matchCat && matchText;
+            });
+            renderProducts(list);
+        }
+
+        function renderProducts(list) {
+            const grid = document.getElementById('product-grid');
+            if (list.length === 0) {
+                grid.innerHTML = `<div class="col-span-full bg-white rounded-3xl p-10 text-center border border-slate-200 font-bold text-emeraldDeep-900">कोई उत्पाद नहीं मिला। कृपया अन्य नाम से खोजें।</div>`;
+                return;
+            }
+            grid.innerHTML = list.map(p => `
+                <div class="lux-card bg-white rounded-3xl border border-emeraldDeep-900/10 overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="relative aspect-[4/3] bg-emeraldDeep-50 overflow-hidden">
+                            <img src="${p.image}" onerror="this.src='${p.fallback}'" alt="${p.name}" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-bold bg-emeraldDeep-900/90 text-harvestGold-400 backdrop-blur-xs">
+                                ${p.categoryLabel}
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-extrabold text-emeraldDeep-900 text-base">${p.name}</h3>
+                            <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-certificate text-limeFresh-600 mr-1.5"></i>${p.grade}</p>
+                            <div class="mt-4 pt-3 border-t border-slate-100 flex items-baseline justify-between">
+                                <div>
+                                    <span class="font-display text-xl font-extrabold text-emeraldDeep-900">₹${p.price}</span>
+                                    <span class="text-xs text-slate-500">/ ${p.unit}</span>
+                                </div>
+                                <span class="text-[11px] font-bold bg-harvestGold-100 text-harvestGold-600 px-2.5 py-1 rounded-lg">
+                                    न्यूनतम: ${p.minQty} ${p.unit}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <button onclick="addToCart(${p.id})" class="w-full py-3 px-4 rounded-xl bg-emeraldDeep-900 hover:bg-limeFresh-600 text-ivoryLux font-bold text-xs sm:text-sm transition flex items-center justify-center shadow-xs">
+                            <i class="fa-solid fa-cart-plus mr-2 text-harvestGold-400"></i>कार्ट में जोड़ें (${p.minQty} ${p.unit})
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 5. Wholesale Cart & Direct WhatsApp Order Dispatch (7000611356)
+        function addToCart(id) {
+            const prod = products.find(p => p.id === id);
+            if (!prod) return;
+            const found = cart.find(i => i.id === id);
+            if (found) found.qty += prod.step;
+            else cart.push({ ...prod, qty: prod.minQty });
+            updateCartUI();
+            showToast(`"${prod.name}" थोक कार्ट में जोड़ा गया!`);
+        }
+
+        function updateItemQty(id, delta) {
+            const idx = cart.findIndex(i => i.id === id);
+            if (idx === -1) return;
+            const newQty = cart[idx].qty + delta;
+            if (newQty < cart[idx].minQty) cart.splice(idx, 1);
+            else cart[idx].qty = newQty;
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            document.getElementById('cart-badge').textContent = cart.length;
+            document.getElementById('cart-total-items').textContent = `${cart.length} आइटम`;
+            const container = document.getElementById('cart-items-container');
+            const totalEl = document.getElementById('cart-total-amount');
+
+            if (cart.length === 0) {
+                totalEl.textContent = '₹0';
+                container.innerHTML = `<div class="text-center py-12 text-slate-500 text-sm"><p class="font-bold text-emeraldDeep-900 mb-1">आपकी थोक कार्ट खाली है</p><p class="text-xs">उत्पाद स्टोर से सब्ज़ियाँ व फल जोड़ें।</p></div>`;
+                return;
+            }
+
+            let sum = 0;
+            container.innerHTML = cart.map(item => {
+                const sub = item.price * item.qty;
+                sum += sub;
+                return `
+                    <div class="p-4 rounded-2xl bg-white border border-emeraldDeep-900/10 flex flex-col gap-2.5">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-bold text-emeraldDeep-900 text-sm">${item.name}</h4>
+                                <p class="text-xs text-slate-500">₹${item.price} / ${item.unit}</p>
+                            </div>
+                            <span class="font-display font-extrabold text-emeraldDeep-900 text-sm">₹${sub.toLocaleString('en-IN')}</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-2 border-t border-slate-100">
+                            <span class="text-xs text-slate-500">मात्रा:</span>
+                            <div class="flex items-center space-x-2">
+                                <button onclick="updateItemQty(${item.id}, -${item.step})" class="w-7 h-7 rounded-lg bg-slate-100 hover:bg-tomatoRed-100 hover:text-tomatoRed-600 font-bold">-</button>
+                                <span class="font-bold text-xs px-2">${item.qty} ${item.unit}</span>
+                                <button onclick="updateItemQty(${item.id}, ${item.step})" class="w-7 h-7 rounded-lg bg-limeFresh-100 text-emeraldDeep-900 font-bold">+</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            totalEl.textContent = `₹${sum.toLocaleString('en-IN')}`;
+        }
+
+        function toggleCartDrawer(open) {
+            const drawer = document.getElementById('cart-drawer');
+            const backdrop = document.getElementById('cart-drawer-backdrop');
+            if (open) {
+                backdrop.classList.remove('hidden');
+                drawer.classList.remove('translate-x-full');
+            } else {
+                drawer.classList.add('translate-x-full');
+                backdrop.classList.add('hidden');
+            }
+        }
+
+        function submitWholesaleOrder(e) {
+            e.preventDefault();
+            if (cart.length === 0) {
+                showToast("कृपया पहले कार्ट में कुछ उत्पाद जोड़ें।");
+                return;
+            }
+            const biz = document.getElementById('order-business-name').value;
+            const phone = document.getElementById('order-phone').value;
+            let itemsText = cart.map((i, idx) => `${idx + 1}. ${i.name} - ${i.qty} ${i.unit} (₹${i.price * i.qty})`).join('%0A');
+            const msg = `नमस्ते *गुप्ता ट्रेडिंग कंपनी (GTC)*,%0Aमुझे नया थोक ऑर्डर देना है:%0A*संस्थान:* ${encodeURIComponent(biz)}%0A*फ़ोन:* ${encodeURIComponent(phone)}%0A%0A*ऑर्डर सूची:*%0A${itemsText}`;
+            
+            window.open(`https://wa.me/917000611356?text=${msg}`, '_blank', 'noopener');
+            cart = [];
+            updateCartUI();
+            e.target.reset();
+            toggleCartDrawer(false);
+            showToast("आपका थोक ऑर्डर व्हाट्सएप (7000611356) पर तैयार कर दिया गया है!");
+        }
+
+        // 6. Forms & Direct WhatsApp Automation Dispatch
+        function handleAppointmentSubmit(e) {
+            e.preventDefault();
+            document.getElementById('appointment-success').classList.remove('hidden');
+            showToast("आपका अपॉइंटमेंट सफलतापूर्वक दर्ज हो गया है!");
+            e.target.reset();
+        }
+
+        function sendDirectWhatsAppQuote(e) {
+            e.preventDefault();
+            const clientName = document.getElementById('wa-client-name').value;
+            const dailyVol = document.getElementById('wa-daily-volume').value;
+            const itemsNote = document.getElementById('wa-items-note').value.trim();
+
+            const msg = `नमस्ते *गुप्ता ट्रेडिंग कंपनी (GTC)*,%0Aहमें दैनिक थोक रेट लिस्ट एवं सप्लाई की जानकारी चाहिए:%0A*नाम / संस्थान:* ${encodeURIComponent(clientName)}%0A*दैनिक खपत:* ${encodeURIComponent(dailyVol)}${itemsNote ? `%0A*आवश्यक उत्पाद:* ${encodeURIComponent(itemsNote)}` : ''}`;
+
+            window.open(`https://wa.me/917000611356?text=${msg}`, '_blank', 'noopener');
+            showToast("डायरेक्ट व्हाट्सएप संदेश (+91 70006 11356) के लिए खुल रहा है!");
+            e.target.reset();
+        }
+
+        function copyAllContacts() {
+            const text = "गुप्ता ट्रेडिंग कंपनी (GTC) रायपुर | WhatsApp: +91 7000611356 | उमेश गुप्ता: +91 9755291356 | राकेश गुप्ता: +91 7898011806 | रत्नेश गुप्ता: +91 7415936740";
+            const tmp = document.createElement("input");
+            tmp.value = text;
+            document.body.appendChild(tmp);
+            tmp.select();
+            document.execCommand("copy");
+            document.body.removeChild(tmp);
+            showToast("GTC के सभी संपर्क नंबर कॉपी हो गए हैं!");
+        }
+
+        let toastTimeout;
+        function showToast(msg) {
+            const toast = document.getElementById('toast-notification');
+            document.getElementById('toast-message').textContent = msg;
+            toast.classList.remove('hidden');
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => toast.classList.add('hidden'), 3500);
+        }
+
+        // 7. Interactive Mouse Parallax for Floating Vegetables & Scroll Reveal
+        document.addEventListener('mousemove', (e) => {
+            const x = (window.innerWidth / 2 - e.pageX);
+            const y = (window.innerHeight / 2 - e.pageY);
+            document.querySelectorAll('.parallax-veg').forEach(el => {
+                const speed = parseFloat(el.dataset.speed || 0.03);
+                el.style.marginLeft = `${x * speed}px`;
+                el.style.marginTop = `${y * speed}px`;
+            });
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderProducts(products);
+            updateCartUI();
+
+            const dateInput = document.getElementById('booking-date');
+            if (dateInput) {
+                const tomorrow = new Date();
+                tomorrow.setDate(tomorrow.getDate() + 1);
+                dateInput.value = tomorrow.toISOString().split('T')[0];
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
